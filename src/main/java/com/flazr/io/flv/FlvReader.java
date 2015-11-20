@@ -238,13 +238,4 @@ public class FlvReader implements RtmpReader {
 		return height;
 	}
 
-	public static void main(String[] args) {
-        FlvReader reader = new FlvReader("/home/felipe/codes/mconf/bbbot/bot/etc/sample.flv");
-        while(reader.hasNext()) {
-            RtmpMessage message = reader.next();
-            logger.debug("{} {}", message, ChannelBuffers.hexDump(message.encode()));
-        }
-        reader.close();
-    }
-
 }
